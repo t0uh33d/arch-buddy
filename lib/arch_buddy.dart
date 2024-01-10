@@ -1,4 +1,5 @@
 import 'package:arch_buddy/commands/init/init.dart';
+import 'package:arch_buddy/config/runtime_configs.dart';
 
 void startArchBuddy(List<String> args) {
   // guard clause to check for valid arguments if provided
@@ -6,6 +7,8 @@ void startArchBuddy(List<String> args) {
   //   print("Invalid command, try : arch-buddy init");
   //   return;
   // }
+
+  RuntimeConfig.initialize();
 
   /// supports only one command for now
   /// ```
