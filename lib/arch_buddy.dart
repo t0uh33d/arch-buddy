@@ -1,5 +1,15 @@
-import 'dart:io';
+import 'package:arch_buddy/commands/init/init.dart';
 
 void startArchBuddy(List<String> args) {
-  print(Directory.current.path);
+  // guard clause to check for valid arguments if provided
+  // if (args.isEmpty || args[0] != "init") {
+  //   print("Invalid command, try : arch-buddy init");
+  //   return;
+  // }
+
+  /// supports only one command for now
+  /// ```
+  /// arch-buddy init
+  /// ```
+  ArchBuddyInit.init();
 }
